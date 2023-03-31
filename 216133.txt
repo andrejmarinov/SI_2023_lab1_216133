@@ -1,0 +1,144 @@
+1.
+-Инсталирано git version 2.40.0.windows.1
+ git profile andrejmarinov
+
+2.
+-Името на главната гранка променето во "master".
+
+3.
+-Креиран е оддалечен репозиториум на GitHub.
+ https://github.com/andrejmarinov/SI_2023_lab1_216133.git
+
+4.
+-Со командата git init го иницијализирав фолдерот со име "SI_2023_lab1_216133" 
+
+5.
+-Го поврзав локалниот репозиториум со оддалечениот репозиториум на GitHub.
+ git remote add origin https://github.com/andrejmarinov/SI_2023_lab1_216133.git
+
+6.
+-Со командата touch README.md креирав нова датотека.
+-Потоа со командата nano README.md ја отворив датотеката во (nano) едитор и си напишав мое име, презиме и индекс.
+-Со командата git add README.md ја ставив датотеката на сцена (staged)
+-Со командата git commit -m "Initial commit" направив commit на датотеката README.md со порака "Initial commit"
+
+
+7.
+-Со командата touch SILab1.java креирав јава датотека каде со командата nano SILab1.java ја отворив во (nano) едитор
+ каде го ставив кодот даден тука https://github.com/stefanandonov/SI2023/blob/master/SILab1.java
+-Со командата git add SILab1.java ја ставив датотеката на сцена (staged)
+-Потоа со командата git commit -m "Add java class" правам commit на датотеката SILab1.java со порака "Add java class"
+
+8.
+-Командата git push origin master се користи за да се постават commit направени на локалната master гранка во 
+ master гранката на отдалеченото репозиториум наречено origin. 
+
+9.
+ git branch bug1
+ git branch bug2
+ git branch bug3
+-Креирам 3 нови гранки со имиња "bug1" , "bug2" и "bug3" 
+
+10.
+-Со командата git checkout bug1 се префлив на гранката bug1
+
+11.
+-Со nano SILab1.java ја отарам датотеката и ја поравам грешката 
+-Потоа треба да ја ставам на сцена датотеката со командата git add SILab1.java 
+-И на крај правам commit со командата git commit -m "Fix wrong loop for reading" која има порака "Fix wrong loop for reading"
+
+12.
+-Се префрлам на гранката bug2 со командата git checkout bug2
+
+13.
+-Со nano SILab1.java ја отарам датотеката и ја поравам грешката 
+-Потоа треба да ja ставам на сцена датотеката со командата git add SILab1.java 
+-И на крај правам commit со командата git commit -m "Fix wrong condition in filterOddNumbers" која има порака "Fix wrong condition in filterOddNumbers"
+
+14.
+-Се префрлам на гранката bug3 со командата git checkout bug3
+
+15.
+-Со nano SILab1.java ја отарам датотеката и ја поравам грешката 
+-Потоа треба да ja ставам на сцена датотеката со командата git add SILab1.java 
+-И на крај правам commit со командата git commit -m "Fix method sumEvenNumbers" која има порака "Fix method sumEvenNumbers"
+
+16.
+-Ги синхронизирам сите гранки со оддалечениот репозиториум со овие команди  
+git checkout bug1
+git push origin bug1
+git checkout bug2
+git push origin bug2
+git checkout bug3
+git push origin bug3
+
+17.
+-Со командата  git checkout master се префрлам на гранката master
+
+18.
+-Спојување на гранката bug1 кон master со командата git merge bug1
+
+-Не се случија никакви конфликти при спојување на bug1 со master 
+-За оваа спојување е употребена рекурзивна стратегија 
+
+19.
+-Ги синхронизирам гранките со оддалечениот репозиториум со овие команди
+git push origin master
+git checkout bug1
+git push origin bug1
+git checkout bug2
+git push origin bug2
+git checkout bug3
+git push origin bug3 
+
+20.
+-Спојување на гранката bug2 кон master со командата git merge bug2
+
+-Не се случија никакви конфликти при спојување на bug2 со master 
+-За оваа спојување е употребена fast-forward стратегија  
+
+21.
+-Ги синхронизирам гранките со оддалечениот репозиториум со овие команди
+git push origin master 
+git checkout bug1
+git push origin bug1
+git checkout bug2
+git push origin bug2
+git checkout bug3
+git push origin bug3
+
+22.
+-Со комндата git checkout bug3 се префрлам на гранката bug3 
+
+23.
+-Со командата git rebase master правам rebase на гранката bug3 кон гранката master 
+
+24.
+-Се префрлам на master гранката со git checkout master
+
+25.
+-Спојување на гранката bug3 кон master со командата git merge bug3
+
+-Не се случија никакви конфликти при спојување на bug1 со master 
+-За оваа спојување е употребена рекурзивна стратегија  
+
+26.
+-Ги синхронизирам гранките со оддалечениот репозиториум со овие команди
+git push origin master 
+git checkout bug1
+git push origin bug1
+git checkout bug2
+git push origin bug2
+git checkout bug3
+git push origin bug3 --force
+
+27.
+-Со командата touch logs.txt додавам нова датотека
+-Потоа со git log ја поголеднувам историјата и ја копирам 
+-Па со командата nano logs.txt ја отварам датотеката logs.txt во (nano) едитор и ја ставам претходно копираната историја  
+-Додавам нова датотека со командата touch 216133.txt па со nano 216133.txt ја отварам во (nano) едитор и ја копирам содржината од датотеката што водам документација додека ја решавам оваа лабораториска вежба 
+-Па со командата git add logs.txt и git add 216133.txt ги додавам двете датотеки на сцена  
+-Потоа со командата git commit -m "Final commit" го правам финалниот commit 
+
+28.
+-Со командата git push origin master правам синхронизација со оддалечениот репозиториум
